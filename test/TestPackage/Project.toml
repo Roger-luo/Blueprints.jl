@@ -1,0 +1,15 @@
+name = "TestPackage"
+uuid = "bf43aa7c-84f9-11ec-013f-39b844c202e3"
+authors = ["rogerluo"]
+version = "0.1.0"
+
+[deps]
+
+[compat]
+julia = "1.7"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+Test = ["Test"]
