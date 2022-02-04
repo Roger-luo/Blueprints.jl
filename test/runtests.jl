@@ -3,6 +3,7 @@ using Blueprints
 bp = Blueprint(
     name="test",
     blueprints=[
+        Blueprints.Readme(),
         Blueprints.JuliaProject(),
         Blueprints.SrcDir(),
         Blueprints.ProjectTest(),

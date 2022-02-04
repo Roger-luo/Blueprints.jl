@@ -1,6 +1,7 @@
 @option struct JuliaProject
     version::VersionNumber = v"0.1.0"
     uuid::UUID = uuid1()
+    deps::Vector{String} = String[]
 end
 
 function compile(bp::JuliaProject, ctx::Context)
@@ -27,4 +28,9 @@ function compile(bp::JuliaProject, ctx::Context)
     open(file_path, "w+") do f
         write_project_toml(file_path, d)
     end
+
+    isempty(bp.deps) || with_project(project_path) do
+        Pkg.add(bp.deps)
+    end
+    return
 end

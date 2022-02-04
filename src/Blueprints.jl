@@ -14,10 +14,5 @@ include("types.jl")
 
 include("blueprints/git.jl")
 include("blueprints/project_file.jl")
-include("blueprints/src_dir.jl")
-include("blueprints/tests.jl")
-include("blueprints/readme.jl")
-include("blueprints/license.jl")
-include("blueprints/documenter.jl")
 
 end
