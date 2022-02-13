@@ -5,7 +5,7 @@ bp = Blueprint(
     name="test",
     blueprints=[
         Blueprints.JuliaProject(),
-        Blueprints.GitRepo(),
+        Blueprints.GitRepo(;name="ABC", email="email@abc.com"),
         Blueprints.GitIgnoreFile(patterns=["Manifest.toml"]),
         Blueprints.GitCommitFiles(msg="Test File Generated"),
         # Blueprints.SrcDir(),
