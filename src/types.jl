@@ -27,14 +27,10 @@ end
 compile(bp::Blueprint, args...; kwargs...) =
     compile(bp, Context(args, NamedTuple(kwargs), (bp, ), Dict{Symbol, Any}()))
 
-preprocess(bp, ctx) = nothing
-postprocess(bp, ctx) = nothing
 function compile(bp::Blueprint, ctx::Context)
     new_ctx = Context(ctx.args, ctx.kwargs, (bp, ctx.stack...), ctx.state)
     for bp in bp.blueprints
-        preprocess(bp, new_ctx)
         compile(bp, new_ctx)
-        postprocess(bp, new_ctx)
     end
     return
 end
