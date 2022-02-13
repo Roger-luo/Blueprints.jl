@@ -1,3 +1,4 @@
+using Test
 using Blueprints
 
 bp = Blueprint(
@@ -14,6 +15,14 @@ bp = Blueprint(
 )
 
 Blueprints.compile(bp;
-    name="TestPackage", path="test/TestPackage", force=true,
+    name="TestPackage", path=pkgdir(Blueprints, "test", "TestPackage"), force=true,
     authors=["rogerluo"],
 )
+
+test_files(xs...) = pkgdir(Blueprints, "test", "TestPackage", xs...)
+
+@testset "check generated files" begin
+    @test isfile(test_files(".gitignore"))
+    @test isfile(test_files("Project.toml"))
+    @test isdir(test_files(".git"))
+end
