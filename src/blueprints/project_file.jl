@@ -34,3 +34,9 @@ function compile(bp::JuliaProject, ctx::Context)
     end
     return
 end
+
+function write_project_toml(filepath::String, d::Dict{String, Any})
+    open(filepath, "w+") do f # following whatever Pkg does
+        TOML.print(f, d; sorted=true, by=key -> (Pkg.Types.project_key_order(key), key))
+    end
+end

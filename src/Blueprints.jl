@@ -4,6 +4,7 @@ using Pkg
 using TOML
 using Dates
 using UUIDs
+using LibGit2
 using Mustache
 using GarishPrint
 using Configurations

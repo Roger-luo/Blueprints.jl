@@ -3,11 +3,13 @@ using Blueprints
 bp = Blueprint(
     name="test",
     blueprints=[
-        Blueprints.Readme(),
         Blueprints.JuliaProject(),
-        Blueprints.SrcDir(),
-        Blueprints.ProjectTest(),
-        Blueprints.License(),
+        Blueprints.GitRepo(),
+        Blueprints.GitIgnoreFile(patterns=["Manifest.toml"]),
+        Blueprints.GitCommitFiles(msg="Test File Generated"),
+        # Blueprints.SrcDir(),
+        # Blueprints.ProjectTest(),
+        # Blueprints.License(),
     ]
 )
 
