@@ -9,7 +9,7 @@ using Mustache
 using GarishPrint
 using Configurations
 
-export Blueprint
+export Blueprint, MustacheBlueprint
 
 include("types.jl")
 

@@ -3,7 +3,7 @@
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://Roger-luo.github.io/Blueprints.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://Roger-luo.github.io/Blueprints.jl/dev)
 [![Build Status](https://github.com/Roger-luo/Blueprints.jl/workflows/CI/badge.svg)](https://github.com/Roger-luo/Blueprints.jl/actions)
-[![Coverage](https://codecov.io/gh/Roger-luo/Blueprints.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/Roger-luo/Blueprints.jl)
+[![codecov](https://codecov.io/gh/Roger-luo/Blueprints.jl/branch/master/graph/badge.svg?token=Ywg7X9EjpJ)](https://codecov.io/gh/Roger-luo/Blueprints.jl)
 
 Abstractions for template/static file rendering.
 
